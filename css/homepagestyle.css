@@ -62,4 +62,55 @@ button {
 .flex-container .img img {
     width: 30rem;
 }
+@media (max-width:950px) {
+.flex-container {
+    flex-direction: column-reverse;
+}
+}
 /*Member*/
+.grid-member {
+    display: grid;
+    grid-template-areas:
+    'bar1 bar2 bar3'
+    'img1 img2 img3'
+    'name1 name2 name3'
+    'detail1 detail2 detail3';
+    /*background-color: blue;*/
+    color: white;
+    grid-column-gap: 50px;
+    grid-row-gap: 1px;
+    font-size: 1.2rem;
+    justify-content: space-evenly;
+}
+.grid-member > div {
+  /*background-color: pink;*/
+  text-align: center;
+  padding: 20px 0;
+}
+.grid-member img {
+    width: 15rem;
+    height: 20rem;
+}
+.grid-member .or-bar {
+    background-color: #cc9966e6;
+    border-radius: 30px;
+    width: 100%;  
+}
+@media (max-width:950px) {
+.grid-member {
+    display: grid;
+    grid-template-areas:
+    'bar1'
+    'img1'
+    'name1'
+    'detail1'
+    'bar2'
+    'img2'
+    'name2'
+    'detail2'
+    'bar3'
+    'img3'
+    'name3'
+    'detail3';
+}
+}
