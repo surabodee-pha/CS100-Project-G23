@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 90px;
+    background-color: #282b30;
+}
+/*Button*/
+button {
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 0px;
+    background: transparent;
+    position: relative;
+    margin: 20px;
+    transition: all 0.25s ease;
+}
+.button-1 {
+    background: black;
+    color: white;
+    border-radius: 30px;
+    transition: all 0.25s ease;
+}
+.button-1:hover {
+    transform: translate(12px, 12px);
+}
+.button-1:hover::before {
+    transform: translate(12px, 12px);
+}
+.button-1:hover::after {
+    transform: translate(6px, 6px);
+}
+.button-1::before, .button-1::after {
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    border-radius: inherit;
+    background: black;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.25s ease;
+}
+/*Aside*/
+.mainp {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+    padding: 0 19%  ;
+}
+.asidetext h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #cc9966e6;
+    margin-bottom: 0.5rem;
+}
+.contentimg img {
+    width: 30rem;
+}
+/*Grid-Layout*/
+.container {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "main sidebar"
+        "footer footer";
+    grid-gap: 60px;
+}
+.main {
+    grid-area: main;
+    border: 1px solid red;
+}
+.main h1 {
+    font-size: 4rem;
+    margin-bottom: 55px;
+}
+.sidebar {
+    grid-area: sidebar;
+    border: 1px solid red;
+    padding: 20px;
+}
+.sidebar img {
+    width: 30rem;
+}
+footer {
+    grid-area: footer;
+    border: 1px solid red;
+    padding: 20px 0;
+    text-align: center;
+}
