@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    /* Remove default margin */
+}
+
+#scrollBtn {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+#scrollBtn>.top {
+    display: none;
+}
+
+#scrollBtn.scrollUp>.top {
+    display: initial;
+}
+
+#scrollBtn.scrollUp>.bottom {
+    display: none;
+}
