@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activities</title>
-    <link rel="stylesheet" href="activities.css">
-    <link rel="stylesheet" href="screen.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-</head>
-<body>
-    <header class="header">
-        <div class="topbar">
-            <div class="topbarcontent">
-                <section class="groupname">
-                    <i class="material-icons icon">school</i>
-                    CS100 G23
-                </section>
-            </div>
-        </div>
-        <div class="bottombar">
-            <div class="bottombarcontent">
-                <a href="#" class="logo">
-                    <img src="tulogo.png" alt="logo" class="logoimg">
-                    <span class="logotext">CSTU PASSPORT</span>
-                </a>
 
-                <nav class="nav">
-                    <ul class="navlist">
-                        <li class="navitem">
-                            <a href="index.html" class="navlink">HOMEPAGE</a>
-                        </li>
-                        <li class="navitem">
-                            <a href="activities.html" class="btn">ACTIVITIES</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="menu">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activities</title>
+  <link rel="stylesheet" href="../css/activities.css">
+  <link rel="stylesheet" href="../css/screen.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <header class="header">
+    <div class="topbar">
+      <div class="topbarcontent">
+        <section class="groupname">
+          <i class="material-icons icon">school</i>
+          CS100 G23 D
+        </section>
+      </div>
+    </div>
+
+    <div class="bottombar">
+      <div class="bottombarcontent">
+        <a href="#" class="logo">
+          <img src="img/tulogo.png" alt="logo" class="logoimg">
+          <span class="logotext">CSTU PASSPORT</span>
+        </a>
+
+        <nav class="nav">
+          <ul class="navlist">
+            <li class="navitem">
+              <a href="index.html" class="btn">HOMEPAGE</a>
+            </li>
+            <li class="navitem">
+              <a href="html/activities.html" class="navlink">ACTIVITIES</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
-    </header>
-    <!-- Form Container -->
-    <div class="form-container">
+      </div>
+    </div>
+  </header>
+  <!-- Form Container -->
+  <div class="form-container">
     <h1>CSTU Passport</h1>
     <!-- Main Form -->
     <form id="myForm" action="#" method="post">
@@ -56,7 +59,7 @@
         <small>Only enter your first name and last name, middle name is not necessary.</small>
         <span id="fullnameError" class="error"></span>
       </div>
-      
+
       <!-- Student ID Field -->
       <div class="form-group">
         <label for="studentID">Student ID</label>
@@ -64,7 +67,7 @@
         <small>Please enter your 10-digit student ID.</small>
         <span id="studentIDError" class="error"></span>
       </div>
-      
+
       <!-- University Email Field -->
       <div class="form-group">
         <label for="email">University Email</label>
@@ -157,9 +160,10 @@
         <input type="submit" value="Submit" />
       </div>
     </form>
-    </div>
+  </div>
 
   <!-- JavaScript -->
-  <script src="activities.js"></script>
+  <script src="../js/activities.js"></script>
 </body>
+
 </html>
