@@ -1,9 +1,10 @@
 body {
     margin: 0;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto", sans-serif;
     padding-top: 90px;
     background-color: #282b30;
 }
+
 /*Button*/
 button {
     padding: 20px 50px;
@@ -15,22 +16,28 @@ button {
     margin: 20px;
     transition: all 0.25s ease;
 }
+
 .button-1 {
     background: black;
     color: white;
     border-radius: 30px;
     transition: all 0.25s ease;
 }
+
 .button-1:hover {
     transform: translate(12px, 12px);
 }
+
 .button-1:hover::before {
     transform: translate(12px, 12px);
 }
+
 .button-1:hover::after {
     transform: translate(6px, 6px);
 }
-.button-1::before, .button-1::after {
+
+.button-1::before,
+.button-1::after {
     content: "";
     position: absolute;
     opacity: 0.3;
@@ -43,6 +50,7 @@ button {
     z-index: -1;
     transition: all 0.25s ease;
 }
+
 /*Content*/
 .flex-container {
     display: flex;
@@ -50,31 +58,40 @@ button {
     align-items: center;
     justify-content: center;
 }
+
 .flex-container .content h1 {
     font-size: 3rem;
     font-weight: bolder;
     color: #cc9966e6;
+    text-align-last: center;
 }
+
 .flex-container .content p {
     font-size: 1.5rem;
     color: #af8050;
+    direction: ltr;
+    unicode-bidi: normal;
 }
+
+
 .flex-container .img img {
     width: 30rem;
 }
+
 @media (max-width:950px) {
-.flex-container {
-    flex-direction: column-reverse;
+    .flex-container {
+        flex-direction: column-reverse;
+    }
 }
-}
+
 /*Member*/
 .grid-member {
     display: grid;
     grid-template-areas:
-    'bar1 bar2 bar3'
-    'img1 img2 img3'
-    'name1 name2 name3'
-    'detail1 detail2 detail3';
+        'bar1 bar2 bar3'
+        'img1 img2 img3'
+        'name1 name2 name3'
+        'detail1 detail2 detail3';
     /*background-color: blue;*/
     color: white;
     grid-column-gap: 50px;
@@ -82,35 +99,39 @@ button {
     font-size: 1.2rem;
     justify-content: space-evenly;
 }
-.grid-member > div {
-  /*background-color: pink;*/
-  text-align: center;
-  padding: 20px 0;
+
+.grid-member>div {
+    /*background-color: pink;*/
+    text-align: center;
+    padding: 20px 0;
 }
+
 .grid-member img {
     width: 15rem;
     height: 20rem;
 }
+
 .grid-member .or-bar {
     background-color: #cc9966e6;
     border-radius: 30px;
-    width: 100%;  
+    width: 100%;
 }
+
 @media (max-width:950px) {
-.grid-member {
-    display: grid;
-    grid-template-areas:
-    'bar1'
-    'img1'
-    'name1'
-    'detail1'
-    'bar2'
-    'img2'
-    'name2'
-    'detail2'
-    'bar3'
-    'img3'
-    'name3'
-    'detail3';
-}
+    .grid-member {
+        display: grid;
+        grid-template-areas:
+            'bar1'
+            'img1'
+            'name1'
+            'detail1'
+            'bar2'
+            'img2'
+            'name2'
+            'detail2'
+            'bar3'
+            'img3'
+            'name3'
+            'detail3';
+    }
 }
