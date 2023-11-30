@@ -9,42 +9,43 @@
   <link rel="stylesheet" href="../css/screen.css">
   <link rel="stylesheet" href="../css/navbar.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
   <header class="header">
     <div class="topbar">
-      <div class="topbarcontent">
-        <section class="groupname">
-          <i class="material-icons icon">school</i>
-          CS100 G23
-        </section>
-      </div>
+        <div class="topbarcontent">
+            <section class="groupname">
+                <i class="material-icons icon">school</i>
+                CS100 G23
+            </section>
+        </div>
     </div>
 
     <div class="bottombar">
-      <div class="bottombarcontent">
-        <a href="#" class="logo">
-          <img src="../img/tulogo.png" alt="logo" class="logoimg">
-          <span class="logotext">CSTU PASSPORT</span>
-        </a>
+        <div class="bottombarcontent">
+            <a href="#" class="logo">
+                <img src="../img/tulogo.png" alt="logo" class="logoimg">
+                <span class="logotext">CSTU PASSPORT</span>
+            </a>
 
-        <nav class="nav">
-          <ul class="navlist">
-            <li class="navitem">
-              <a href="../index.html" class="navlink">HOMEPAGE</a>
-            </li>
-            <li class="navitem">
-              <a href="activities.html" class="btn">ACTIVITIES</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="menu">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+            <nav class="nav">
+                <ul class="navlist">
+                    <li class="navitem">
+                        <a href="../index.html" class="navlink">HOMEPAGE</a>
+                    </li>
+                    <li class="navitem">
+                        <a href="activities.html" class="btn">ACTIVITIES</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </div>
-      </div>
     </div>
   </header>
   <!-- Form Container -->
@@ -151,12 +152,18 @@
 
       <!-- Submit Button -->
       <div class="form-group">
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" onclick="showInput();" />
       </div>
     </form>
+    <p><span id='display_message'></span></p>
   </div>
-
-
+  <!--
+  <form>
+  Enter message: <input type="text" id = "message">
+  <input type="button" onclick="showMessage()" value="submit" />
+  </form>
+  <p> Message is: <span id = "display_message"></span> </p>
+-->
   <!-- JavaScript -->
   <script src="../js/activities.js"></script>
   <script src="../js/navbar.js"></script>

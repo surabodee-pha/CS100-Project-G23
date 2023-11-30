@@ -164,6 +164,35 @@ async function submitForm(event) {
   }
 }
 
+function showInput() {
+  var name = document.getElementById("fullname").value;
+  var studentID = document.getElementById("studentID").value;
+  var universityEmail = document.getElementById("email").value;
+  var workTitle = document.getElementById("workTitle").value;
+  var workType = document.getElementById("activityType").value;
+  var academicYear = document.getElementById("academicYear").value;
+  var semester = document.getElementById("semester").value;
+  var startDate = document.getElementById("startDate").value;
+  var endDate = document.getElementById("endDate").value;
+  var location = document.getElementById("location").value;
+  var description = document.getElementById("description").value;
+
+  var result =
+  "<p>Firstname and Lastname: " +name +"</p>" +
+  "<p>Student ID: " +studentID +"</p>" +
+  "<p>University Email: " +universityEmail +"</p>" +
+  "<p>Work/Activity Title: " +workTitle +"</p>" +
+  "<p>Type of Work/Activity: " +workType +"</p>" +
+  "<p>Academic Year: " +academicYear +"</p>" +
+  "<p>Semester: " +semester +"</p>" +
+  "<p>Start Date/Time: " +startDate +"</p>" +
+  "<p>End Date/Time: " +endDate +"</p>" +
+  "<p>Location: " +location +"</p>" +
+  "<p>Description: " +description +"</p>";
+
+  display_message.innerHTML = result;
+}
+
 // Event listener for form submission
 document.getElementById("myForm").addEventListener("submit", submitForm);
 

@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -136,7 +136,6 @@ ul {
 .menu--open .bar:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
 }
-
 @media (max-width:650px) {
     .nav {
         position: fixed;
