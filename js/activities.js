@@ -21,7 +21,7 @@ function validateName() {
 // Function to validate Student ID
 function validateStudentID() {
   const studentIDInput = document.getElementById("studentID");
-  const studentIDPattern = /^\d{10}$/;
+  const studentIDPattern = /^6609\d{6}$/;
   const errorElement = document.getElementById("studentIDError");
 
   if (!studentIDPattern.test(studentIDInput.value)) {
@@ -177,20 +177,25 @@ function showInput() {
   var location = document.getElementById("location").value;
   var description = document.getElementById("description").value;
 
-  var result =
-  "<p>Firstname and Lastname: " +name +"</p>" +
-  "<p>Student ID: " +studentID +"</p>" +
-  "<p>University Email: " +universityEmail +"</p>" +
-  "<p>Work/Activity Title: " +workTitle +"</p>" +
-  "<p>Type of Work/Activity: " +workType +"</p>" +
-  "<p>Academic Year: " +academicYear +"</p>" +
-  "<p>Semester: " +semester +"</p>" +
-  "<p>Start Date/Time: " +startDate +"</p>" +
-  "<p>End Date/Time: " +endDate +"</p>" +
-  "<p>Location: " +location +"</p>" +
-  "<p>Description: " +description +"</p>";
+  if (name &&studentID &&universityEmail &&workTitle &&workType 
+    &&academicYear &&semester &&startDate &&endDate &&location ||description) {
+      var result =
+      "<p>Firstname and Lastname: " +name +"</p>" +
+      "<p>Student ID: " +studentID +"</p>" +
+      "<p>University Email: " +universityEmail +"</p>" +
+      "<p>Work/Activity Title: " +workTitle +"</p>" +
+      "<p>Type of Work/Activity: " +workType +"</p>" +
+      "<p>Academic Year: " +academicYear +"</p>" +
+      "<p>Semester: " +semester +"</p>" +
+      "<p>Start Date/Time: " +startDate +"</p>" +
+      "<p>End Date/Time: " +endDate +"</p>" +
+      "<p>Location: " +location +"</p>" +
+      "<p>Description: " +description +"</p>";
 
-  display_message.innerHTML = result;
+      display_message.innerHTML = result;
+  } else {
+    alert("Please fill in all required information.");
+  }
 }
 
 // Event listener for form submission
