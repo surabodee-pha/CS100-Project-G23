@@ -8,44 +8,47 @@
   <link rel="stylesheet" href="../css/activities.css">
   <link rel="stylesheet" href="../css/screen.css">
   <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/td.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"> <!--topdown-->
 </head>
 
 <body>
   <header class="header">
     <div class="topbar">
-        <div class="topbarcontent">
-            <section class="groupname">
-                <i class="material-icons icon">school</i>
-                CS100 G23
-            </section>
-        </div>
+      <div class="topbarcontent">
+        <section class="groupname">
+          <i class="material-icons icon">school</i>
+          CS100 G23
+        </section>
+      </div>
     </div>
 
     <div class="bottombar">
-        <div class="bottombarcontent">
-            <a href="#" class="logo">
-                <img src="../img/tulogo.png" alt="logo" class="logoimg">
-                <span class="logotext">CSTU PASSPORT</span>
-            </a>
+      <div class="bottombarcontent">
+        <a href="#" class="logo">
+          <img src="../img/tulogo.png" alt="logo" class="logoimg">
+          <span class="logotext">CSTU PASSPORT</span>
+        </a>
 
-            <nav class="nav">
-                <ul class="navlist">
-                    <li class="navitem">
-                        <a href="../index.html" class="navlink">HOMEPAGE</a>
-                    </li>
-                    <li class="navitem">
-                        <a href="activities.html" class="btn">ACTIVITIES</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
+        <nav class="nav">
+          <ul class="navlist">
+            <li class="navitem">
+              <a href="../index.html" class="navlink">HOMEPAGE</a>
+            </li>
+            <li class="navitem">
+              <a href="activities.html" class="btn">ACTIVITIES</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
+      </div>
     </div>
   </header>
   <!-- Form Container -->
@@ -60,7 +63,7 @@
         <small>Only enter your first name and last name, middle name is not necessary.</small>
         <span id="fullnameError" class="error"></span>
       </div>
-      
+
       <!-- Student ID Field -->
       <div class="form-group">
         <label for="studentID">Student ID</label>
@@ -68,7 +71,7 @@
         <small>Please enter your 10-digit student ID.</small>
         <span id="studentIDError" class="error"></span>
       </div>
-      
+
       <!-- University Email Field -->
       <div class="form-group">
         <label for="email">University Email</label>
@@ -157,6 +160,20 @@
     </form>
     <p><span id='display_message'></span></p>
   </div>
+
+  <!--topdown button-->
+  <div>
+    <button id="scrollBtn">
+      <a href="#" class="top">
+        <span class="top"></span>
+        <span class="material-symbols-outlined"> arrow_upward </span>
+      </a>
+      <a href="#" class="bottom">
+        <span class="material-symbols-outlined"> arrow_downward </span>
+        <span class="bottom"></span>
+      </a>
+    </button>
+  </div>
   <!--
   <form>
   Enter message: <input type="text" id = "message">
@@ -167,6 +184,7 @@
   <!-- JavaScript -->
   <script src="../js/activities.js"></script>
   <script src="../js/navbar.js"></script>
+  <script src="../่js/td.js"></script>
 </body>
 
 </html>
