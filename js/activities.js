@@ -49,11 +49,27 @@ function validateEmail() {
   return true;
 }
 
+function validateTitle() {
+  const titleInput = document.getElementById("workTitle");
+  const titlePattern = /^[a-zA-Zก-๙ ]{4,}$/;
+  const errorElement = document.getElementById("workError");
+  if (!titlePattern.test(titleInput.value)) {
+    errorElement.textContent = "Title must be a minimum of 4 characters.";
+    Input.classList.add("highlight");
+    return false;
+  } else {
+    errorElement.textContent = ""; // Clear the error message when valid
+    Input.classList.remove("highlight");
+  }
+  return true;
+}
+
 // Function to validate form inputs on user input
 function validateFormOnInput() {
   validateName();
   validateStudentID();
   validateEmail();
+  validateTitle();
 }
 
 // Function to fetch activity types from the backend
@@ -91,7 +107,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   populateActivityTypes(activityTypes);
 });
 
-// Function to submit the form
 // Function to submit the form
 async function submitForm(event) {
   event.preventDefault();
@@ -203,7 +218,6 @@ document.getElementById("myForm").addEventListener("submit", submitForm);
 
 // Event listeners for input validation on user input
 document.getElementById("fullname").addEventListener("input", validateName);
-document
-  .getElementById("studentID")
-  .addEventListener("input", validateStudentID);
+document.getElementById("studentID").addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
+document.getElementById("workTitle").addEventListener("input", validateTitle);
