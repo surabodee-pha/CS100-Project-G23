@@ -18,6 +18,23 @@ body {
   margin-bottom: 20px;
 }
 
+.form-container .buttonth {
+  background-color: #f9bf3c;
+  color: #cf152d;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form-container .buttoneng {
+  background-color: #083d86;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 /* Styling for each form group */
 .form-group {
   margin-bottom: 20px;
@@ -53,7 +70,7 @@ body {
 }
 
 /* Styling for the submit button */
-.form-group input[type="submit"] {
+form button[type="submit"] {
   background-color: #4caf50;
   color: white;
   padding: 10px 15px;

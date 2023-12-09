@@ -54,6 +54,8 @@
   <!-- Form Container -->
   <div class="form-container">
     <h1>CSTU Passport</h1>
+    <button class="buttonth" onclick="changeLang('thai')">Thai</button>
+    <button class="buttoneng"onclick="changeLang('english')">English</button>
     <!-- Main Form -->
     <form id="myForm" action="#" method="post">
       <!-- Firstname and Lastname Field -->
@@ -166,19 +168,11 @@
         <textarea id="description" name="description" rows="4"></textarea>
       </div>
 
-      <!-- Submit Button -->
-      <div class="form-group">
-        <input type="submit" value="Submit" onclick="showInput();" />
-      </div>
-      <!-- Reset Button -->
-      <div class="form-group">
-        <button type="reset">Reset</button>
-        <input type="submit" value="Submit" id="reset" name="reset" />
-      </div>
+      <button type="submit" onclick="showInput()">Submit</button>
+
     </form>
     <p><span id='display_message'></span></p>
   </div>
-
   <!--topdown button-->
   <div class="td">
     <button id="scrollBtn">
@@ -198,14 +192,7 @@
       <source src="img/bg.ogg">
     </audio>
   </div>
-  <!--
-  <form>
-  Enter message: <input type="text" id = "message">
-  <input type="button" onclick="showMessage()" value="submit" />
-  </form>
-  <p> Message is: <span id = "display_message"></span> </p>
--->
-  <!-- JavaScript -->
+
   <script src="../js/activities.js"></script>
   <script src="../js/navbar.js"></script>
   <script src="../่js/td.js"></script>
