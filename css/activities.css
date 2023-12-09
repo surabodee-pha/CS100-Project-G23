@@ -2,7 +2,48 @@ body {
   margin: 0;
   padding-top: 90px;
   font-family: "Roboto", sans-serif;
+<<<<<<< Updated upstream
   background-color: white;
+=======
+  
+}
+
+.theme {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  background-color: var(--color-secondary);
+  width: 200px;
+  height: 40px;
+  border-radius: 1000px;
+  box-shadow: inset 0.5px 0.5px 2px 0 var(--color-accent);
+}
+
+input[type="radio"] {
+  appearance: none;
+  display: none;
+}
+
+.radio-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  border-radius: 1000px;
+  overflow: hidden;
+  transition: linear 0.3s;
+  color: var(--#0f2027, #203a43, #2c5364);
+}
+
+input[type="radio"]:checked + label {
+  background-color: var(--color-highlight);
+  color: var(--color-background);
+  font-weight: 900;
+  transition: 0.3s;
+>>>>>>> Stashed changes
 }
 
 /* Styling for the form container */
@@ -12,6 +53,10 @@ body {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+<<<<<<< Updated upstream
+=======
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+>>>>>>> Stashed changes
 }
 
 /* Center-align the heading and add margin at the bottom */
