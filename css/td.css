@@ -21,3 +21,22 @@ body {
 #scrollBtn.scrollUp>.bottom {
     display: none;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.td {
+    scroll-behavior: smooth;
+    background-color: red;
+    bottom: auto;
+    right: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.td:hover {
+    background-color: tomato;
+}
