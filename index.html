@@ -83,9 +83,8 @@
             <br><span style="color: #cc9966e9;">Contact :</span> 0830058465
             <br><span style="color: #cc9966e9;">Favourite Song: </span> <br> <iframe style="border-radius:12px"
                 width="300" height="160"
-                src="https://open.spotify.com/embed/album/3a1R5H5ybKXzMVM75WPGBU?utm_source=generator" width="100%"
-                frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                src="https://open.spotify.com/embed/album/3a1R5H5ybKXzMVM75WPGBU?utm_source=generator" frameBorder="0"
+                allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
         </div>
         <div class="detail2">
@@ -124,14 +123,49 @@
                 <span class="material-symbols-outlined"> arrow_downward </span>
                 <span class="bottom"></span>
             </a>
+
+
         </button>
     </div>
     <!-- music background-->
-    <div class="music">
-        <audio preload="auto" loop autoplay controls hidden>
+
+    <!--<div class="music">
+        <audio preload="auto" loop autoplay>
             <source src="img/bg.ogg">
-        </audio>
+    </div> -->
+    <div class="audio">
+        <audio id="audio" src="img/bg.ogg" preload="auto" autoplay></audio>
+        <button id="play" onclick="playpause()">play &#9658;</button>
+        &nbsp;
+        &nbsp;
+        <button id="stop" onclick="stop()">stop &#9611;</button>
     </div>
+
+    <script>
+        var audio = document.getElementById('audio');
+        var playButton = document.getElementById('play');
+        var stopButton = document.getElementById('stop');
+        var count = 0;
+
+        function playpause() {
+            if (count == 0) {
+                count = 1;
+                audio.play();
+                playButton.innerHTML = "pause &#9208;";
+            } else {
+                count = 0;
+                audio.pause();
+                playButton.innerHTML = "play &#9658;";
+            }
+        }
+
+        function stop() {
+            count = 0;
+            audio.pause();
+
+            playButton.innerHTML = "play &#9658;";
+        }
+    </script>
 
     <script src="js/navbar.js"></script>
     <script src="js/td.js"></script>
