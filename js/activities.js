@@ -13,8 +13,8 @@ function validateName() {
     fullnameInput.classList.add("wrong");
     return false;
   } else {
-    errorElement.textContent = ""; // Clear the error message when valid
-    fullnameInput.classList.add("wrong");
+    errorElement.textContent = "";
+    fullnameInput.classList.remove("wrong");
   }
   return true;
 }
@@ -29,8 +29,8 @@ function validateStudentID() {
     studentIDInput.classList.add("wrong");
     return false;
   } else {
-    errorElement.textContent = ""; // Clear the error message when valid
-    studentIDInput.classList.add("wrong");
+    errorElement.textContent = "";
+    studentIDInput.classList.remove("wrong");
   }
   return true;
 }
@@ -45,7 +45,7 @@ function validateEmail() {
     emailInput.classList.add("wrong");
     return false;
   } else {
-    errorElement.textContent = ""; // Clear the error message when valid
+    errorElement.textContent = "";
     emailInput.classList.remove("wrong");
   }
   return true;
@@ -60,12 +60,11 @@ function validateTitle() {
     titleInput.classList.add("wrong");
     return false;
   } else {
-    errorElement.textContent = ""; // Clear the error message when valid
+    errorElement.textContent = "";
     titleInput.classList.remove("wrong");
   }
   return true;
 }
-
 function validateActivity(){
   const Input = document.getElementById("activityType");
   const errorElement = document.getElementById("activityError");
@@ -105,20 +104,29 @@ function validateSemester(){
   }
   return true;
 }
-
-function validateDate(){
-  const Input = document.getElementById("endDate");
-  const Inputs = document.getElementById("startDate");
-  const errorElement = document.getElementById("endDateError");
+function validateStart(){
+  const Input = document.getElementById("startDate");
+  const errorElement = document.getElementById("startError");
   if (Input.value == "") {
       errorElement.innerHTML = "Required.";
-      Input.classList.remove("wrong");
-      Inputs.classList.remove("wrong");
+      Input.classList.add("wrong");
       return false;
   } else {
       errorElement.innerHTML = "";
+      Input.classList.remove("wrong");
+  }
+  return true;
+}
+function validateDate(){
+  const Input = document.getElementById("endDate");
+  const errorElement = document.getElementById("endDateError");
+  if (Input.value == "") {
+      errorElement.innerHTML = "Required.";
       Input.classList.add("wrong");
-      Inputs.classList.add("wrong");
+      return false;
+  } else {
+      errorElement.innerHTML = "";
+      Input.classList.remove("wrong");
   }
   const startDateInput = document.getElementById("startDate").value;
   const endDateInput = document.getElementById("endDate").value;
@@ -126,14 +134,12 @@ function validateDate(){
   const endDate = new Date(endDateInput);
 
   if (endDate <= startDate){
-    errorElement.textContent = "End Date/Time must be after Start DateTime.";
+    errorElement.innerHTML = "End Date/Time must be after Start DateTime.";
     Input.classList.add("wrong");
-    Inputs.classList.add("wrong");
     return false;
   }else {
     errorElement.innerHTML = "";
     Input.classList.remove("wrong");
-    Inputs.classList.remove("wrong");
   }
   return true;
 }
@@ -161,6 +167,7 @@ function validateFormOnInput() {
   validateActivity();
   validateAcademic();
   validateSemester();
+  validateStart()
   validateDate();
   validateLocation();
 }
@@ -320,7 +327,7 @@ async function submitForm(event) {
 
   // Validate form inputs before submission
   if (!validateName() || !validateStudentID() || !validateEmail() || !validateTitle() || !validateActivity() ||
-  !validateAcademic() || !validateSemester() || !validateDate() || !validateLocation()) {
+  !validateAcademic() || !validateSemester() || !validateStart() || !validateDate() || !validateLocation()) {
     return;
   }
 
@@ -432,5 +439,6 @@ document.getElementById("workTitle").addEventListener("input", validateTitle);
 document.getElementById("activity").addEventListener("input", validateActivity);
 document.getElementById("academic").addEventListener("input", validateAcademic);
 document.getElementById("semester").addEventListener("input", validateSemester);
+document.getElementById("startDate").addEventListener("input", validateStart);
 document.getElementById("endDate").addEventListener("input", validateDate);
 document.getElementById("location").addEventListener("input", validateLocation);
