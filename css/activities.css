@@ -81,7 +81,7 @@ body {
   display: block;
   margin-top: 5px;
 }
-.highlight {
-  background-color: #F26E61;
-  border: 3px solid #7A2020;
+.wrong {
+  background-color: #9e2141;
+  color: #fdf1e1;
 }

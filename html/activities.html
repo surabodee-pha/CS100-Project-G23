@@ -84,6 +84,7 @@
       <div class="form-group">
         <label for="workTitle">Work/Activity Title</label>
         <input type="text" id="workTitle" name="workTitle" />
+        <small>Title must be a minimum of 4 characters.</small>
         <span id="workError" class="error"></span>
       </div>
 
@@ -100,6 +101,8 @@
           <option value="Competition">Competition</option>
           <option value="Computer Science">Computer Science</option>
         </select>
+        <small>Please enter type of Work/Activity.</small>
+        <span id="activityError" class="error"></span>
       </div>
 
       <!-- Academic Year Field -->
@@ -117,6 +120,8 @@
           <option value="2568">2568</option>
           <option value="2569">2569</option>
         </select>
+        <small>Please enter Academic Year.</small>
+        <span id="academicError" class="error"></span>
       </div>
 
       <!-- Semester Field -->
@@ -128,24 +133,31 @@
           <option value="2">2</option>
           <option value="Summer">Summer</option>
         </select>
+        <small>Please enter semester.</small>
+        <span id="semesterError" class="error"></span>
       </div>
 
       <!-- Start Date/Time Field -->
       <div class="form-group">
         <label for="startDate">Start Date/Time</label>
         <input type="datetime-local" id="startDate" name="startDate" />
+        <small>Please enter Start Date/Time.</small>
       </div>
 
       <!-- End Date/Time Field -->
       <div class="form-group">
         <label for="endDate">End Date/Time</label>
         <input type="datetime-local" id="endDate" name="endDate" />
+        <small>Please enter End Date/Time.</small>
+        <span id="endDateError" class="error"></span>
       </div>
 
       <!-- Location Field -->
       <div class="form-group">
         <label for="location">Location</label>
         <input type="text" id="location" name="location" />
+        <small>Please enter your location.</small>
+        <span id="locationError" class="error"></span>
       </div>
 
       <!-- Description Field -->
