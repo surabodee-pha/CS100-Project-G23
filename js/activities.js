@@ -3,6 +3,16 @@ const config = {
 };
 const port = 8000;
 
+function clear() {
+  alert("This form has been cleared");
+  const form = document.getElementById("myForm");
+  for (const element of form.elements) {
+  if (element.type !== "submit" && element.type !== "button") {
+    element.value = "";
+    }
+  }
+}
+
 // Function to validate Firstname and Lastname
 function validateName() {
   const fullnameInput = document.getElementById("fullname");

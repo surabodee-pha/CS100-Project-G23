@@ -77,8 +77,7 @@ form button[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
 }
-
-.form-group [type="reset"] {
+form button[type="reset"] {
   background-color: #DA1A1A;
   color: white;
   padding: 10px 15px;
