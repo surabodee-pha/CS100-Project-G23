@@ -183,9 +183,9 @@ function validateFormOnInput() {
 }
 
 function changeLang(language) {
-
   const labels = document.querySelectorAll("form label");
   const smalls = document.querySelectorAll("form small");
+  const buttons = document.querySelectorAll("form button");
   const submitButton = document.querySelector("button[type='submit']");
   for (const label of labels) {
     const labelText = label.textContent;
@@ -241,58 +241,70 @@ function changeLang(language) {
     }
   }
   for (const small of smalls) {
-    const smallText = small.textContent;
+      const smallText = small.textContent;
 
+      if (language === "thai") {
+        if (smallText === "Only enter your first name and last name, middle name is not necessary.") {
+          small.textContent = "ใส่เฉพาะชื่อและนามสกุลเท่านั้น ไม่จำเป็นต้องใช้ชื่อกลาง";
+        } else if (smallText === "Please enter your 10-digit student ID.") {
+          small.textContent = "กรุณากรอกรหัสนักศึกษา 10 หลัก";
+        } else if (smallText === 'Please provide your university email in the format "xxx.yyy@dome.tu.ac.th".') {
+          small.textContent = 'กรุณาระบุอีเมลมหาวิทยาลัยของในรูปแบบ "xxx.yyy@dome.tu.ac.th"';
+        } else if (smallText === "Title must be a minimum of 4 characters.") {
+          small.textContent = "กิจกรรมที่เข้าร่วมต้องมีอย่างน้อย 4 ตัวอักษร";
+        } else if (smallText === "Please enter type of Work/Activity.") {
+          small.textContent = "กรุณาระบุประเภทกิจกรรม";
+        } else if (smallText === "Please enter Academic Year.") {
+          small.textContent = "กรุณาระบุปีการศึกษา.";
+        } else if (smallText === "Please enter semester.") {
+          small.textContent = "กรุณาระบุภาคการศึกษา";
+        } else if (smallText === "Please enter Start Date/Time.") {
+          small.textContent = "กรุณากรอกวันที่/เวลาเริ่มต้นกิจกรรม";
+        } else if (smallText === "Please enter End Date/Time.") {
+          small.textContent = "กรุณากรอกวันที่/เวลาสิ้นสุดกิจกรรม";
+        } else if (smallText === "Please enter your location.") {
+          small.textContent = "กรุณาระบุสถานที่จัดกิจกรรม";
+        }
+      else if (language === "english") {
+        if (smallText === "ใส่เฉพาะชื่อและนามสกุลเท่านั้น ไม่จำเป็นต้องใช้ชื่อกลาง") {
+          small.textContent = "Only enter your first name and last name, middle name is not necessary.";
+        } else if (smallText === "กรุณากรอกรหัสนักศึกษา 10 หลัก") {
+          small.textContent = "Please enter your 10-digit student ID.";
+        } else if (smallText === 'กรุณาระบุอีเมลมหาวิทยาลัยของในรูปแบบ "xxx.yyy@dome.tu.ac.th"') {
+          small.textContent = 'Please provide your university email in the format "xxx.yyy@dome.tu.ac.th".';
+        } else if (smallText === "กิจกรรมที่เข้าร่วมต้องมีอย่างน้อย 4 ตัวอักษร") {
+          small.textContent = "Title must be a minimum of 4 characters.";
+        } else if (smallText === "กรุณาระบุประเภทกิจกรรม") {
+          small.textContent = "Please enter type of Work/Activity.";
+        } else if (smallText === "กรุณาระบุปีการศึกษา.") {
+          small.textContent = "Please enter Academic Year.";
+        } else if (smallText === "กรุณาระบุภาคการศึกษา") {
+          small.textContent = "Please enter semester.";
+        } else if (smallText === "กรุณากรอกวันที่/เวลาเริ่มต้นกิจกรรม") {
+          small.textContent = "Please enter Start Date/Time.";
+        } else if (smallText === "กรุณากรอกวันที่/เวลาสิ้นสุดกิจกรรม") {
+          small.textContent = "Please enter End Date/Time.";
+        } else if (smallText === "กรุณาระบุสถานที่จัดกิจกรรม") {
+          small.textContent = "Please enter your location.";
+        }
+        }
+      }
+  }
+  for (const button of buttons) {
+    const buttonText = button.textContent;
     if (language === "thai") {
-      if (smallText === "Only enter your first name and last name, middle name is not necessary.") {
-        small.textContent = "ใส่เฉพาะชื่อและนามสกุลเท่านั้น ไม่จำเป็นต้องใช้ชื่อกลาง";
-      } else if (smallText === "Please enter your 10-digit student ID.") {
-        small.textContent = "กรุณากรอกรหัสนักศึกษา 10 หลัก";
-      } else if (smallText === 'Please provide your university email in the format "xxx.yyy@dome.tu.ac.th".') {
-        small.textContent = 'กรุณาระบุอีเมลมหาวิทยาลัยของในรูปแบบ "xxx.yyy@dome.tu.ac.th"';
-      } else if (smallText === "Title must be a minimum of 4 characters.") {
-        small.textContent = "กิจกรรมที่เข้าร่วมต้องมีอย่างน้อย 4 ตัวอักษร";
-      } else if (smallText === "Please enter type of Work/Activity.") {
-        small.textContent = "กรุณาระบุประเภทกิจกรรม";
-      } else if (smallText === "Please enter Academic Year.") {
-        small.textContent = "กรุณาระบุปีการศึกษา.";
-      } else if (smallText === "Please enter semester.") {
-        small.textContent = "กรุณาระบุภาคการศึกษา";
-      } else if (smallText === "Please enter Start Date/Time.") {
-        small.textContent = "กรุณากรอกวันที่/เวลาเริ่มต้นกิจกรรม";
-      } else if (smallText === "Please enter End Date/Time.") {
-        small.textContent = "กรุณากรอกวันที่/เวลาสิ้นสุดกิจกรรม";
-      } else if (smallText === "Please enter your location.") {
-        small.textContent = "กรุณาระบุสถานที่จัดกิจกรรม";
+      if (buttonText === "Submit") {
+        button.textContent = "ยืนยัน";
+      } else if (buttonText === "Clear") {
+        button.textContent = "ล้าง";
       }
     } else if (language === "english") {
-      if (smallText === "ใส่เฉพาะชื่อและนามสกุลเท่านั้น ไม่จำเป็นต้องใช้ชื่อกลาง") {
-        small.textContent = "Only enter your first name and last name, middle name is not necessary.";
-      } else if (smallText === "กรุณากรอกรหัสนักศึกษา 10 หลัก") {
-        small.textContent = "Please enter your 10-digit student ID.";
-      } else if (smallText === 'กรุณาระบุอีเมลมหาวิทยาลัยของในรูปแบบ "xxx.yyy@dome.tu.ac.th"') {
-        small.textContent = 'Please provide your university email in the format "xxx.yyy@dome.tu.ac.th".';
-      } else if (smallText === "กิจกรรมที่เข้าร่วมต้องมีอย่างน้อย 4 ตัวอักษร") {
-        small.textContent = "Title must be a minimum of 4 characters.";
-      } else if (smallText === "กรุณาระบุประเภทกิจกรรม") {
-        small.textContent = "Please enter type of Work/Activity.";
-      } else if (smallText === "กรุณาระบุปีการศึกษา.") {
-        small.textContent = "Please enter Academic Year.";
-      } else if (smallText === "กรุณาระบุภาคการศึกษา") {
-        small.textContent = "Please enter semester.";
-      } else if (smallText === "กรุณากรอกวันที่/เวลาเริ่มต้นกิจกรรม") {
-        small.textContent = "Please enter Start Date/Time.";
-      } else if (smallText === "กรุณากรอกวันที่/เวลาสิ้นสุดกิจกรรม") {
-        small.textContent = "Please enter End Date/Time.";
-      } else if (smallText === "กรุณาระบุสถานที่จัดกิจกรรม") {
-        small.textContent = "Please enter your location.";
-    }
-  }
-  if (language === "thai") {
-    submitButton.textContent = "ยืนยัน";
-  } else if (language === "english") {
-    submitButton.textContent = "Submit";
-  }
+      if (buttonText === "ยืนยัน") {
+        button.textContent = "Submit";
+      } else if (buttonText === "ล้าง") {
+        button.textContent = "Clear"; 
+      }
+    }  
   }
 }
 
